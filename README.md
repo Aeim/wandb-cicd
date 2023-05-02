@@ -1,3 +1,3 @@
 # wandb-cicd
 
-This are resource for the W&B CI/CD and ML course.
+This repo contains resource for the W&B CI/CD and ML course.
