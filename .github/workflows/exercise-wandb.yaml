@@ -66,7 +66,7 @@ jobs:
       uses: actions/github-script@v6
       if: steps.wandb-report.outcome == 'success' 
       with:
-        github-token: ${{ secrets.MY_PAT }} # We have to use our own token because we want to trigger another action
+        github-token: ${{ secrets.MY_TOKEN || github.token }} # We have to use our own token because we want to trigger another action
         script: |            
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
